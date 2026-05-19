@@ -42,4 +42,10 @@ object camion {
     method puedeCircular(nivelPeligrosidad) {
       return !self.estaExcedido() && (self.cosasConUnNivelPeligro_(nivelPeligrosidad)).isEmpty()
     }
+    method cosaMasPesada() {
+      return carga.max{c => c.peso()}
+    }
+    method hayAlgunaCosaQuePeseEntre_Y_(min, max) {
+      return carga.any { c => c.peso() >= min && c.peso() <= max }
+    }
 } 
