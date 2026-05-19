@@ -13,7 +13,7 @@ describe "Test Cosas" {
   }
 
   test "El contenedor porturario pesa 306 kg si tiene a bumblebee robot y un paquete con 3 ladrillos" {
-    bumblebee.transformarse()
+    bumblebee.transformarseEnRobot()
     paqueteLadrillos.cambiarCantLadrillos(3)
     contenedor.agregarAlContenedor(bumblebee)
     contenedor.agregarAlContenedor(paqueteLadrillos)

@@ -1,7 +1,7 @@
 import cosas.*
 //CAMION
 object camion {
-    var carga = []
+    const carga = []
     const pesoPropio = 1000
     const pesoMax = 2500
 
