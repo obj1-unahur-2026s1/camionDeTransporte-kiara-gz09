@@ -12,8 +12,7 @@ object bumblebee {
     const peso = 800
     var esRobot = true
 
-    method transformarAuto(){esRobot = false}
-    method transformarRobot(){esRobot = true}
+    method transformarse() {esRobot = !esRobot}
     method peso() = peso
     method nivelPeligro(){
         if (esRobot)
@@ -61,7 +60,7 @@ object contenedor {
     var contenido = []
     const pesoPropio = 100
 
-    method agregarAlContenerdor(unaCosa) {
+    method agregarAlContenedor(unaCosa) {
         contenido.add(unaCosa)
     }
     method sacarDelContenedor(unaCosa) {

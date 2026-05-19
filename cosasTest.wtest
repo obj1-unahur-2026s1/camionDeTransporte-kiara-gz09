@@ -1,9 +1,27 @@
 import cosas.*
 
-describe "group of test for cosas" {
+describe "Test Cosas" {
 
-  test "first test" {
-    assert.that(true)
+  test "El peso del paquete de ladrillos si son 20 es de 40kg" {
+    paqueteLadrillos.cambiarCantLadrillos(20)
+    assert.equals(40, paqueteLadrillos.peso())
   }
 
-}
+  test "El nivel de peligro de la bateriaAntiaera es de 0 si no tiene misiles" {
+    bateriaAntiaera.sacarMisiles()
+    assert.that(bateriaAntiaera.nivelPeligro() == 0)
+  }
+
+  test "El contenedor porturario pesa 306 kg si tiene a bumblebee robot y un paquete con 3 ladrillos" {
+    bumblebee.transformarse()
+    paqueteLadrillos.cambiarCantLadrillos(3)
+    contenedor.agregarAlContenedor(bumblebee)
+    contenedor.agregarAlContenedor(paqueteLadrillos)
+    assert.equals(906, contenedor.peso())
+  }
+  test "El embajaje pesa 30k con los residuos radioactivos de 30k dentro" {
+    residuosRadiactivos.cambiarPeso(30)
+    embalajeSeguridad.cambiarObjeto(residuosRadiactivos)
+    assert.that(embalajeSeguridad.peso() == 30)
+  }
+} 
