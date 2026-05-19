@@ -1,4 +1,5 @@
 import cosas.*
+//CAMION
 object camion {
     var carga = []
     const pesoPropio = 1000
